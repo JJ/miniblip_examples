@@ -32,7 +32,7 @@ int main()
         int rgb = floor(max_led*pot); 
         neopixel::PixelArray array(MATRIX_PIN);
         for(int i=0;i<NLEDS;i++) {
-            setPixel(i, rgb, max_led-rgb, max_led-rgb);
+            setPixel(i, max_led-rgb, max_led-rgb, max_led);
         }
                 
         array.update(buffer, NLEDS); 
